@@ -45,3 +45,8 @@ export async function fetchStatus(base: string): Promise<Status> {
     clearTimeout(timer);
   }
 }
+
+/** 서버 ToF 3D 뷰어를 HUD 없이 (작은 칸용). */
+export function tof3dUrl(base: string): string {
+  return `${base}/tof/3d?embed=1`;
+}

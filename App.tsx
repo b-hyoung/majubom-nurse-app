@@ -5,6 +5,7 @@ import { fetchStatus, Status, BED_ID } from './src/api';
 import { deriveLevel, Level, LEVEL_META, rank } from './src/level';
 import { prepareAlarm, startAlarm, stopAlarm } from './src/alarm';
 import { getBase, normalizeBase, setBase } from './src/storage';
+import { Tof3D } from './src/Tof3D';
 
 const POLL_MS = 500;
 const OFFLINE_AFTER_MS = 5000;
@@ -172,6 +173,9 @@ function Dashboard({ base, onChangeBase }: { base: string; onChangeBase: () => v
           <Text style={[s.acked, { color: cardSub }]}>확인 {fmtTime(ackedAt)}</Text>
         )}
       </Animated.View>
+
+      {/* ToF 3D 자세 (서버 대시보드와 같은 뷰) */}
+      <Tof3D base={base} offline={offline} />
 
       {/* 세부 */}
       <View style={s.rows}>

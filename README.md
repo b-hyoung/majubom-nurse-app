@@ -4,9 +4,11 @@ MajuBom 서버의 위험 판정을 읽어 간호사 폰에 단계별 진동·소
 
 ## 화면
 
-| 정상 | 경고 | 위험 | 확인 후 |
+| 정상 | 경고 | 위험 | 침대 이탈 |
 |---|---|---|---|
-| ![](docs/screenshots/02_정상.png) | ![](docs/screenshots/04_경고.png) | ![](docs/screenshots/05_위험.png) | ![](docs/screenshots/06_위험_확인됨.png) |
+| ![](docs/screenshots/3d/01_정상.png) | ![](docs/screenshots/3d/03_경고.png) | ![](docs/screenshots/3d/04_위험.png) | ![](docs/screenshots/3d/05_침대이탈.png) |
+
+가운데 **ToF 3D** 칸은 서버의 3D 자세 뷰(`/tof/3d?embed=1`)를 그대로 띄운 것. 웹 대시보드와 같은 그림이다.
 
 ## 실행
 
